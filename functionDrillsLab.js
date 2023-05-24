@@ -463,3 +463,34 @@ let bathtubScope = ['cute, squeaky, nautical']
 
 //This array should contain the variable names (as strings) accessible in the pond function.
 let pondScope = ['cute, fluffy']
+
+
+
+
+// function addToZero(arr){
+//   for (let i = 0; i < arr.length; i++){
+//     if (arr[i] + arr[i + 1] != 0 || arr[i] + arr[i + 2] != 0 || arr[i] + arr[i + 3] != 0 || arr[i] + arr[i + 4] != 0){
+//       i++
+//     } 
+//   }
+// }
+
+console.log('---code challenge---')
+
+let numArr1 = [1, 4, 11, 2, 37, -4]
+let numArr2 = [0, 21, 33, 6, 0, -9] 
+let numArr3 = [0, 1, 2, 3, 4, 5]
+
+function addToZero(arr){
+  for (let i = 0; i < arr.length; i++){
+    for (let j = 1; j < arr.length; j++){
+      if (arr[i] + arr[j] == 0){
+        return true;
+      }
+    }
+  } return false;
+}
+
+console.log(addToZero(numArr1))
+console.log(addToZero(numArr2))
+console.log(addToZero(numArr3))

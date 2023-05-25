@@ -483,8 +483,8 @@ let numArr3 = [0, 1, 2, 3, 4, 5]
 
 function addToZero(arr){
   for (let i = 0; i < arr.length; i++){
-    for (let j = 1; j < arr.length; j++){
-      if (arr[i] + arr[j] == 0){
+    for (let j = i + 1; j < arr.length; j++){
+      if (arr[i] + arr[j] === 0){
         return true;
       }
     }
@@ -494,3 +494,23 @@ function addToZero(arr){
 console.log(addToZero(numArr1))
 console.log(addToZero(numArr2))
 console.log(addToZero(numArr3))
+
+// Starting array
+let array = [0, 1, 2, 3, 4, 5] 
+
+//Write your solution below:
+
+function addToZero(arr) {
+
+    for (let i = 0; i < arr.length; i++) {
+    const curNum = arr[i];
+    for (let j = i + 1; j < arr.length; j++) {
+      if ((curNum + arr[j]) === 0) {
+        return true
+      }
+    }
+  } return false
+}
+let doesArrayNumbersAddToZero = addToZero(array);
+
+console.log(doesArrayNumbersAddToZero);
